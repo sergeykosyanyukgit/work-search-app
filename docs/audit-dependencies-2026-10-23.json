@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-23",
+  "source": "pnpm audit --json",
+  "packageVersion": "0.1.4",
+  "lockfile": "pnpm-lock.yaml",
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 3,
+      "moderate": 10,
+      "high": 9,
+      "critical": 0
+    },
+    "dependencies": 94,
+    "devDependencies": 428,
+    "optionalDependencies": 101,
+    "totalDependencies": 522
+  },
+  "advisories": [
+    {
+      "id": 1240091,
+      "module": "fast-uri",
+      "severity": "moderate",
+      "title": "fast-uri vulnerable to inconsistent host case normalization via percent-encoded octets",
+      "url": "https://github.com/advisories/GHSA-hrr3-gc8f-f4qj",
+      "vulnerable": ">=3.0.0 <3.1.8",
+      "patched": ">=3.1.8",
+      "installedVersions": [
+        "3.1.7"
+      ]
+    },
+    {
+      "id": 1240100,
+      "module": "brace-expansion",
+      "severity": "moderate",
+      "title": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+      "url": "https://github.com/advisories/GHSA-q2hr-2g5m-vwhr",
+      "vulnerable": "<1.1.21",
+      "patched": ">=1.1.21",
+      "installedVersions": [
+        "1.1.18"
+      ]
+    },
+    {
+      "id": 1240101,
+      "module": "brace-expansion",
+      "severity": "moderate",
+      "title": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+      "url": "https://github.com/advisories/GHSA-q2hr-2g5m-vwhr",
+      "vulnerable": ">=2.0.0 <2.1.7",
+      "patched": ">=2.1.7",
+      "installedVersions": [
+        "2.1.4"
+      ]
+    },
+    {
+      "id": 1240103,
+      "module": "brace-expansion",
+      "severity": "moderate",
+      "title": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+      "url": "https://github.com/advisories/GHSA-q2hr-2g5m-vwhr",
+      "vulnerable": ">=4.0.0 <5.0.12",
+      "patched": ">=5.0.12",
+      "installedVersions": [
+        "5.0.9"
+      ]
+    },
+    {
+      "id": 1240104,
+      "module": "brace-expansion",
+      "severity": "high",
+      "title": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+      "url": "https://github.com/advisories/GHSA-qhr7-859c-m2p7",
+      "vulnerable": "<1.1.20",
+      "patched": ">=1.1.20",
+      "installedVersions": [
+        "1.1.18"
+      ]
+    },
+    {
+      "id": 1240105,
+      "module": "brace-expansion",
+      "severity": "high",
+      "title": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+      "url": "https://github.com/advisories/GHSA-qhr7-859c-m2p7",
+      "vulnerable": ">=2.0.0 <2.1.6",
+      "patched": ">=2.1.6",
+      "installedVersions": [
+        "2.1.4"
+      ]
+    },
+    {
+      "id": 1240107,
+      "module": "brace-expansion",
+      "severity": "high",
+      "title": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+      "url": "https://github.com/advisories/GHSA-qhr7-859c-m2p7",
+      "vulnerable": ">=4.0.0 <5.0.11",
+      "patched": ">=5.0.11",
+      "installedVersions": [
+        "5.0.9"
+      ]
+    },
+    {
+      "id": 1240108,
+      "module": "brace-expansion",
+      "severity": "high",
+      "title": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+      "url": "https://github.com/advisories/GHSA-6j4f-fj2g-mc7p",
+      "vulnerable": "<1.1.19",
+      "patched": ">=1.1.19",
+      "installedVersions": [
+        "1.1.18"
+      ]
+    },
+    {
+      "id": 1240109,
+      "module": "brace-expansion",
+      "severity": "high",
+      "title": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+      "url": "https://github.com/advisories/GHSA-6j4f-fj2g-mc7p",
+      "vulnerable": ">=2.0.0 <2.1.5",
+      "patched": ">=2.1.5",
+      "installedVersions": [
+        "2.1.4"
+      ]
+    },
+    {
+      "id": 1240111,
+      "module": "brace-expansion",
+      "severity": "high",
+      "title": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+      "url": "https://github.com/advisories/GHSA-6j4f-fj2g-mc7p",
+      "vulnerable": ">=4.0.0 <5.0.10",
+      "patched": ">=5.0.10",
+      "installedVersions": [
+        "5.0.9"
+      ]
+    },
+    {
+      "id": 1240991,
+      "module": "http-cache-semantics",
+      "severity": "high",
+      "title": "http-cache-semantics max-stale handling can disclose cross-user cached responses",
+      "url": "https://github.com/advisories/GHSA-ch52-4w7c-c8xp",
+      "vulnerable": "<=4.2.0",
+      "patched": ">=4.3.0",
+      "installedVersions": [
+        "4.2.0"
+      ]
+    },
+    {
+      "id": 1241209,
+      "module": "source-map-js",
+      "severity": "high",
+      "title": "source-map-js allows event-loop denial of service through indexed source-map section offsets",
+      "url": "https://github.com/advisories/GHSA-68fv-2mgg-jv7q",
+      "vulnerable": ">=1.0.0 <1.2.2",
+      "patched": ">=1.2.2",
+      "installedVersions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "id": 1242623,
+      "module": "vite",
+      "severity": "moderate",
+      "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows",
+      "url": "https://github.com/advisories/GHSA-698v-4r3x-3vcv",
+      "vulnerable": ">=7.0.0 <=7.3.6",
+      "patched": ">=7.3.7",
+      "installedVersions": [
+        "7.3.6"
+      ]
+    },
+    {
+      "id": 1242652,
+      "module": "vite",
+      "severity": "moderate",
+      "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors",
+      "url": "https://github.com/advisories/GHSA-r825-w8mm-5pxw",
+      "vulnerable": ">=7.0.0 <=7.3.6",
+      "patched": ">=7.3.7",
+      "installedVersions": [
+        "7.3.6"
+      ]
+    },
+    {
+      "id": 1242659,
+      "module": "vite",
+      "severity": "high",
+      "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+      "url": "https://github.com/advisories/GHSA-587h-7wmj-h5pm",
+      "vulnerable": ">=7.0.0 <=7.3.6",
+      "patched": ">=7.3.7",
+      "installedVersions": [
+        "7.3.6"
+      ]
+    },
+    {
+      "id": 1242725,
+      "module": "vite",
+      "severity": "low",
+      "title": "Vite: Cross origin script execution through Vite custom middleware",
+      "url": "https://github.com/advisories/GHSA-9jrq-w75r-8gcw",
+      "vulnerable": ">=7.0.0 <=7.3.6",
+      "patched": ">=7.3.7",
+      "installedVersions": [
+        "7.3.6"
+      ]
+    },
+    {
+      "id": 1242731,
+      "module": "vite",
+      "severity": "moderate",
+      "title": "Vite: Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine",
+      "url": "https://github.com/advisories/GHSA-rq7h-c2jc-7f22",
+      "vulnerable": ">=7.0.0 <=7.3.6",
+      "patched": ">=7.3.7",
+      "installedVersions": [
+        "7.3.6"
+      ]
+    },
+    {
+      "id": 1242767,
+      "module": "@vitest/mocker",
+      "severity": "moderate",
+      "title": "Vitest: Code injection via unauthenticated manual mock registration",
+      "url": "https://github.com/advisories/GHSA-qxg6-89mg-rqv8",
+      "vulnerable": ">=2.1.0-beta.7 <4.1.12",
+      "patched": ">=4.1.12",
+      "installedVersions": [
+        "4.1.11"
+      ]
+    },
+    {
+      "id": 1242769,
+      "module": "@vitest/mocker",
+      "severity": "moderate",
+      "title": "Vitest: Windows backslash traversal bypasses the @vitest/mocker redirect allowlist fix",
+      "url": "https://github.com/advisories/GHSA-xp26-3454-mjgp",
+      "vulnerable": ">=4.1.11 <4.1.12",
+      "patched": ">=4.1.12",
+      "installedVersions": [
+        "4.1.11"
+      ]
+    },
+    {
+      "id": 1242841,
+      "module": "electron",
+      "severity": "moderate",
+      "title": "Electron: Pointer lock permission requests can be attributed to the wrong frame",
+      "url": "https://github.com/advisories/GHSA-x562-297c-g43g",
+      "vulnerable": ">=44.0.0-alpha.1 <44.5.0",
+      "patched": ">=44.5.0",
+      "installedVersions": [
+        "44.3.0"
+      ]
+    },
+    {
+      "id": 1242848,
+      "module": "electron",
+      "severity": "low",
+      "title": "Electron: Frame subscription trusts GPU-supplied frame geometry",
+      "url": "https://github.com/advisories/GHSA-3qxv-5xgr-q7w9",
+      "vulnerable": ">=44.0.0-alpha.1 <44.4.3",
+      "patched": ">=44.4.3",
+      "installedVersions": [
+        "44.3.0"
+      ]
+    },
+    {
+      "id": 1242852,
+      "module": "electron",
+      "severity": "low",
+      "title": "Electron: Off-screen rendering on macOS trusts GPU-supplied frame geometry",
+      "url": "https://github.com/advisories/GHSA-h3v5-h239-pg29",
+      "vulnerable": ">=44.0.0-alpha.1 <44.4.3",
+      "patched": ">=44.4.3",
+      "installedVersions": [
+        "44.3.0"
+      ]
+    }
+  ]
+}

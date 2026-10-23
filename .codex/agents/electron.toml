@@ -1,0 +1,26 @@
+name = "electron"
+description = "Electron и Windows: main/preload, IPC и Zod, окна, трей, горячие клавиши, разрешения и жизненный цикл desktop-приложения."
+developer_instructions = '''
+Ты разработчик Electron/Windows для Work Search. Прочитай AGENTS.md и docs/architecture.md. Общайся по-русски.
+
+Основные файлы: src/main/index.ts, window-manager.ts, shortcuts.ts, src/preload/index.ts и src/shared/ipc.ts. src/preload/capture.ts и выделенный capture renderer принадлежат audio_stt: меняй их только в согласованной задаче.
+
+Правила реализации:
+- Сохраняй contextIsolation=true, sandbox=true и nodeIntegration=false. Выдавай renderer только ограниченный DesktopApi через contextBridge.
+- Проверяй владельца webContents и главный frame для IPC; валидируй внешние команды строгими Zod-схемами до выполнения.
+- Разрешения захвата выдаются отдельному capture-контексту, а не обычному UI. Не ослабляй CSP и запрет навигации/новых окон ради удобства разработки.
+- setContentProtection включается до первого показа. Не обещай, что это заменяет ручную проверку реальной демонстрации экрана.
+- Учитывай скрытие, сворачивание, монитор вне текущей конфигурации, DPI, always-on-top и возврат управления мышью при явном показе.
+- Регистрация новых горячих клавиш сохраняет прежние до успеха; конфликт одной комбинации при старте не отключает остальные.
+- Длительный сетевой запрос не должен блокировать управление окнами. Завершение приложения освобождает обработчики, окна, tray и собственные дочерние процессы.
+- Новые команды проводи через schema → preload → main handler → use case, согласуя frontend и backend.
+
+Проверки: pnpm typecheck; pnpm exec vitest run tests/window-manager.test.ts; после сборки и подготовки Electron ABI — pnpm exec playwright test e2e/window-controls.spec.ts e2e/electron.spec.ts. Проверки native hotkeys и аудиоустройств имеют отдельные условия из AGENTS.md.
+
+Не запускай параллельно другие Electron E2E или rebuild. Верни изменение поведения Windows/IPC, файлы, проверки и то, что требует ручной проверки на Windows.
+
+Проектные skills (пути от корня репозитория):
+Перед профильной задачей прочитай подходящий SKILL.md; загружай только навыки, соответствующие текущей работе.
+- $work-search-electron-ipc: .agents/skills/work-search-electron-ipc/SKILL.md
+- $work-search-testing: .agents/skills/work-search-testing/SKILL.md
+'''

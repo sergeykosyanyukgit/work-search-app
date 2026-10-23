@@ -1,0 +1,3 @@
+interface:
+  display_name: "Work Search: Windows-релиз"
+  short_description: "Сборка x64, ресурсы, NSIS и packaged smoke"

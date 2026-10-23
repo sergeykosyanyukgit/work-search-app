@@ -1,0 +1,3 @@
+interface:
+  display_name: "Work Search: Audio / STT"
+  short_description: "Аудиозахват, Whisper и измерение распознавания"

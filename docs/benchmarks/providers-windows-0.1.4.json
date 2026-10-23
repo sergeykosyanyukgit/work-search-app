@@ -1,0 +1,95 @@
+{
+  "version": "0.1.4",
+  "date": "2026-09-12T13:46:54.438Z",
+  "environment": "Windows, packaged Electron, same machine and connection; no STT",
+  "samples": [
+    {
+      "provider": "local",
+      "index": 1,
+      "firstRequest": true,
+      "model": "gpt-5.6-sol",
+      "cliVersion": "0.154.0-alpha.6.2",
+      "latency": {
+        "queueMs": 1,
+        "connectionMs": 1104,
+        "aiFirstAnswerMs": 9265,
+        "firstAnswerMs": 10371,
+        "aiTotalMs": 11721,
+        "totalMs": 12828
+      }
+    },
+    {
+      "provider": "local",
+      "index": 2,
+      "firstRequest": false,
+      "model": "gpt-5.6-sol",
+      "cliVersion": "0.154.0-alpha.6.2",
+      "latency": {
+        "queueMs": 1,
+        "connectionMs": 0,
+        "aiFirstAnswerMs": 1806,
+        "firstAnswerMs": 1808,
+        "aiTotalMs": 4254,
+        "totalMs": 4256
+      }
+    },
+    {
+      "provider": "local",
+      "index": 3,
+      "firstRequest": false,
+      "model": "gpt-5.6-sol",
+      "cliVersion": "0.154.0-alpha.6.2",
+      "latency": {
+        "queueMs": 1,
+        "connectionMs": 0,
+        "aiFirstAnswerMs": 2103,
+        "firstAnswerMs": 2104,
+        "aiTotalMs": 4619,
+        "totalMs": 4620
+      }
+    },
+    {
+      "provider": "local",
+      "index": 4,
+      "firstRequest": false,
+      "model": "gpt-5.6-sol",
+      "cliVersion": "0.154.0-alpha.6.2",
+      "latency": {
+        "queueMs": 1,
+        "connectionMs": 0,
+        "aiFirstAnswerMs": 1710,
+        "firstAnswerMs": 1711,
+        "aiTotalMs": 4228,
+        "totalMs": 4229
+      }
+    },
+    {
+      "provider": "local",
+      "index": 5,
+      "firstRequest": false,
+      "model": "gpt-5.6-sol",
+      "cliVersion": "0.154.0-alpha.6.2",
+      "latency": {
+        "queueMs": 1,
+        "connectionMs": 0,
+        "aiFirstAnswerMs": 2242,
+        "firstAnswerMs": 2244,
+        "aiTotalMs": 4820,
+        "totalMs": 4822
+      }
+    }
+  ],
+  "processCleanup": {
+    "newCodexProcessesRemaining": [],
+    "preexistingProcessesStillRunning": true
+  },
+  "coverage": {
+    "local": "Five live questions in packaged application",
+    "cloud": "Live benchmark pending: no saved client token in the standard Windows profile. Packaged protocol integration passed against a fixture server."
+  },
+  "localWarm": {
+    "samples": 4,
+    "firstAnswerMedianMs": 1956,
+    "totalMedianMs": 4438
+  }
+}

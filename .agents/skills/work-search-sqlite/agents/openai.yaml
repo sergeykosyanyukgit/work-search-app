@@ -1,0 +1,3 @@
+interface:
+  display_name: "Work Search: SQLite"
+  short_description: "Шифрование, миграции, история и durable outbox"

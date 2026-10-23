@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-23",
+  "source": "corepack pnpm audit --json",
+  "pnpm": "11.19.0",
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0
+    },
+    "dependencies": 95,
+    "devDependencies": 428,
+    "optionalDependencies": 101,
+    "totalDependencies": 523
+  },
+  "advisories": {}
+}

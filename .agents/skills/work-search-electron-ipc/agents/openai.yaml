@@ -1,0 +1,3 @@
+interface:
+  display_name: "Work Search: Electron"
+  short_description: "IPC, окна Windows, preload и горячие клавиши"

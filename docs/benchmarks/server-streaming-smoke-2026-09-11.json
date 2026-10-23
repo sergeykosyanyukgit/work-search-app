@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "profile": "interview-assistant@2",
+  "turns": 3,
+  "cancellation": {
+    "firstTextMs": 3694,
+    "settledMs": 52
+  },
+  "replacementsById": true,
+  "reconnect": {
+    "succeeded": true,
+    "automaticResends": 0,
+    "afterSequence": 58
+  },
+  "afterCancel": {
+    "inputTokens": 7534,
+    "outputTokens": 183,
+    "firstAnswerMs": 24694,
+    "totalMs": 25485
+  },
+  "afterReconnect": {
+    "inputTokens": 7740,
+    "outputTokens": 148,
+    "firstAnswerMs": 3430,
+    "totalMs": 4183
+  },
+  "persisted": true,
+  "cleanup": true
+}

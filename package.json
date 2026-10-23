@@ -1,0 +1,56 @@
+{
+  "name": "work-search-app",
+  "version": "0.1.4",
+  "description": "Локальный помощник для собеседований",
+  "private": true,
+  "type": "module",
+  "main": "out/main/index.js",
+  "author": "Work Search App",
+  "license": "MIT",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:packaged": "node scripts/smoke-packaged.mjs",
+    "check:publication": "node scripts/check-publication.mjs",
+    "build": "pnpm typecheck && electron-vite build",
+    "rebuild": "electron-builder install-app-deps",
+    "setup:whisper": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-whisper.ps1",
+    "setup:runtime": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-runtime.ps1",
+    "licenses:generate": "node scripts/generate-third-party-notices.mjs",
+    "release:preflight": "node scripts/check-release-resources.mjs",
+    "dist": "pnpm licenses:generate && pnpm release:preflight && pnpm build && electron-builder --win nsis --x64",
+    "pack": "pnpm licenses:generate && pnpm release:preflight && pnpm build && electron-builder --dir --win --x64"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "lucide-react": "^0.577.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-markdown": "^10.1.0",
+    "ws": "^8.22.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "^8.18.2",
+    "@vitejs/plugin-react": "^5.2.0",
+    "electron": "^44.9.3",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7",
+    "vitest": "^4.1.12"
+  }
+}

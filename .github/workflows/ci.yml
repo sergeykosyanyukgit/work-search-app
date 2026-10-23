@@ -1,0 +1,89 @@
+name: Windows checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: windows-latest
+    timeout-minutes: 40
+    env:
+      RUN_LOCAL_CODEX: '0'
+      WHISPER_TEST_BINARY_DIRECTORY: ''
+      WHISPER_TEST_MODEL_DIRECTORY: ''
+      WORK_SEARCH_TEST_MODEL: ''
+      WORK_SEARCH_TEST_NATIVE_HOTKEYS: '0'
+      WORK_SEARCH_TEST_PACKAGED: '0'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check:publication
+      - name: Prepare SQLite for Node tests
+        run: npm rebuild better-sqlite3
+      - run: node .agents/skills/work-search-testing/scripts/preflight.mjs
+      - run: pnpm test
+      - run: node --test service-integration/codex-manager/scripts/provision-interview-assistant.test.mjs
+      - run: pnpm build
+      - run: pnpm exec playwright install chromium --only-shell
+      - run: pnpm exec playwright test e2e/ui-renderer.spec.ts
+      - name: Stage verified release resources
+        run: |
+          pnpm setup:whisper
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          pnpm setup:runtime
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Package and verify resources, notices and Electron ABI
+        run: pnpm run pack
+      - run: pnpm test:packaged
+      - name: Electron tests with isolated profiles and mock AI
+        run: pnpm exec playwright test e2e/electron.spec.ts e2e/window-controls.spec.ts
+
+  secrets:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Scan all reachable history with verified Gitleaks
+        shell: pwsh
+        run: |
+          $archive = Join-Path $env:RUNNER_TEMP 'gitleaks_8.30.1_windows_x64.zip'
+          $directory = Join-Path $env:RUNNER_TEMP 'work-search-gitleaks'
+          Invoke-WebRequest -Uri 'https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_windows_x64.zip' -OutFile $archive
+          if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash -ne 'D29144DEFF3A68AA93CED33DDDF84B7FDC26070ADD4AA0F4513094C8332AFC4E') { throw 'Gitleaks SHA256 mismatch' }
+          Expand-Archive -LiteralPath $archive -DestinationPath $directory -Force
+          & (Join-Path $directory 'gitleaks.exe') git . --redact=100 --no-banner --log-opts='--all --full-history'
+          exit $LASTEXITCODE
+
+  dependencies:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+      - run: pnpm audit --audit-level high

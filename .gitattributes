@@ -1,0 +1,4 @@
+# Upstream licenses are stored verbatim and verified by SHA256 during setup/pack.
+# Do not let core.autocrlf rewrite them on a Windows checkout.
+licenses/** -text
+tests/audio-fixtures/*.wav binary

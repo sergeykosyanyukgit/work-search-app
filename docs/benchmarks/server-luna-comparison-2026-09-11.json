@@ -1,0 +1,121 @@
+{
+  "measuredAt": "2026-09-11T19:55:52.755Z",
+  "source": "public-websocket-synthetic",
+  "results": [
+    {
+      "variant": "profile-v2",
+      "model": "gpt-5.6-luna",
+      "samples": [
+        {
+          "variant": "profile-v2",
+          "model": "gpt-5.6-luna",
+          "sample": 1,
+          "turnId": "5794b6a9-cc4e-40fb-82a8-ce25d3d0a200",
+          "queuedMs": 26,
+          "startedMs": 187,
+          "firstAnswerMs": 2766,
+          "totalMs": 3636,
+          "inputTokens": 5847,
+          "outputTokens": 48,
+          "answerChars": 173,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:55:42.317Z",
+            "dispatchedAt": "2026-09-11T19:55:42.354Z",
+            "workerAcceptedAt": "2026-09-11T19:55:42.358Z",
+            "modelStartedAt": "2026-09-11T19:55:42.486Z",
+            "firstAnswerAt": "2026-09-11T19:55:45.064Z",
+            "completedAt": "2026-09-11T19:55:45.936Z",
+            "queueMs": 37,
+            "dispatchMs": 4,
+            "runtimeStartupMs": 128,
+            "modelToFirstAnswerMs": 2578,
+            "timeToFirstAnswerMs": 2747,
+            "generationMs": 872,
+            "totalMs": 3619
+          }
+        },
+        {
+          "variant": "profile-v2",
+          "model": "gpt-5.6-luna",
+          "sample": 2,
+          "turnId": "8916d8af-dffd-4cf6-a5ab-a4ff2f9dbb98",
+          "queuedMs": 25,
+          "startedMs": 63,
+          "firstAnswerMs": 1281,
+          "totalMs": 2100,
+          "inputTokens": 6131,
+          "outputTokens": 57,
+          "answerChars": 206,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:55:46.610Z",
+            "dispatchedAt": "2026-09-11T19:55:46.640Z",
+            "workerAcceptedAt": "2026-09-11T19:55:46.643Z",
+            "modelStartedAt": "2026-09-11T19:55:46.655Z",
+            "firstAnswerAt": "2026-09-11T19:55:47.872Z",
+            "completedAt": "2026-09-11T19:55:48.693Z",
+            "queueMs": 30,
+            "dispatchMs": 3,
+            "runtimeStartupMs": 12,
+            "modelToFirstAnswerMs": 1217,
+            "timeToFirstAnswerMs": 1262,
+            "generationMs": 821,
+            "totalMs": 2083
+          }
+        },
+        {
+          "variant": "profile-v2",
+          "model": "gpt-5.6-luna",
+          "sample": 3,
+          "turnId": "fd14808c-8b1f-4b99-8511-262273cd3441",
+          "queuedMs": 20,
+          "startedMs": 62,
+          "firstAnswerMs": 1597,
+          "totalMs": 2726,
+          "inputTokens": 6216,
+          "outputTokens": 56,
+          "answerChars": 192,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:55:49.367Z",
+            "dispatchedAt": "2026-09-11T19:55:49.399Z",
+            "workerAcceptedAt": "2026-09-11T19:55:49.403Z",
+            "modelStartedAt": "2026-09-11T19:55:49.413Z",
+            "firstAnswerAt": "2026-09-11T19:55:50.948Z",
+            "completedAt": "2026-09-11T19:55:52.078Z",
+            "queueMs": 32,
+            "dispatchMs": 4,
+            "runtimeStartupMs": 10,
+            "modelToFirstAnswerMs": 1535,
+            "timeToFirstAnswerMs": 1581,
+            "generationMs": 1130,
+            "totalMs": 2711
+          }
+        }
+      ],
+      "summary": {
+        "firstAnswerMs": {
+          "samples": 3,
+          "median": 1597,
+          "p95": 2649.1
+        },
+        "totalMs": {
+          "samples": 3,
+          "median": 2726,
+          "p95": 3545
+        },
+        "inputTokens": {
+          "samples": 3,
+          "median": 6131,
+          "p95": 6207.5
+        },
+        "outputTokens": {
+          "samples": 3,
+          "median": 56,
+          "p95": 56.9
+        }
+      }
+    }
+  ]
+}

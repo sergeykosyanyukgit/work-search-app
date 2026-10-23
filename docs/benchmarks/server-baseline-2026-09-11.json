@@ -1,0 +1,146 @@
+{
+  "measuredAt": "2026-09-11T19:29:27.050Z",
+  "source": "public-websocket-synthetic",
+  "results": [
+    {
+      "variant": "baseline",
+      "model": "gpt-5.6-sol",
+      "samples": [
+        {
+          "variant": "baseline",
+          "model": "gpt-5.6-sol",
+          "sample": 1,
+          "turnId": "98258500-f0c1-470a-8e0e-fcabc444f592",
+          "queuedMs": 40,
+          "startedMs": 662,
+          "firstAnswerMs": 6668,
+          "totalMs": 6918,
+          "inputTokens": 8646,
+          "outputTokens": 120,
+          "answerChars": 440,
+          "serverLatency": null
+        },
+        {
+          "variant": "baseline",
+          "model": "gpt-5.6-sol",
+          "sample": 2,
+          "turnId": "aecd7819-f30a-458c-ad81-4116c289b951",
+          "queuedMs": 32,
+          "startedMs": 595,
+          "firstAnswerMs": 6100,
+          "totalMs": 6349,
+          "inputTokens": 8818,
+          "outputTokens": 114,
+          "answerChars": 442,
+          "serverLatency": null
+        },
+        {
+          "variant": "baseline",
+          "model": "gpt-5.6-sol",
+          "sample": 3,
+          "turnId": "08bb5320-3e54-4ba1-b651-147f939d33f3",
+          "queuedMs": 35,
+          "startedMs": 846,
+          "firstAnswerMs": 6600,
+          "totalMs": 6849,
+          "inputTokens": 11571,
+          "outputTokens": 104,
+          "answerChars": 411,
+          "serverLatency": null
+        }
+      ],
+      "summary": {
+        "firstAnswerMs": {
+          "samples": 3,
+          "median": 6600,
+          "p95": 6668
+        },
+        "totalMs": {
+          "samples": 3,
+          "median": 6849,
+          "p95": 6918
+        },
+        "inputTokens": {
+          "samples": 3,
+          "median": 8818,
+          "p95": 11571
+        },
+        "outputTokens": {
+          "samples": 3,
+          "median": 114,
+          "p95": 120
+        }
+      }
+    },
+    {
+      "variant": "compact",
+      "model": "gpt-5.6-sol",
+      "samples": [
+        {
+          "variant": "compact",
+          "model": "gpt-5.6-sol",
+          "sample": 1,
+          "turnId": "ce1f0131-d2a2-4904-b8e9-24fbf74743fc",
+          "queuedMs": 29,
+          "startedMs": 681,
+          "firstAnswerMs": 5181,
+          "totalMs": 5430,
+          "inputTokens": 5263,
+          "outputTokens": 93,
+          "answerChars": 361,
+          "serverLatency": null
+        },
+        {
+          "variant": "compact",
+          "model": "gpt-5.6-sol",
+          "sample": 2,
+          "turnId": "93f85530-f4fe-4c6a-b30e-c4fe3ac6f720",
+          "queuedMs": 34,
+          "startedMs": 598,
+          "firstAnswerMs": 6103,
+          "totalMs": 6353,
+          "inputTokens": 5408,
+          "outputTokens": 96,
+          "answerChars": 355,
+          "serverLatency": null
+        },
+        {
+          "variant": "compact",
+          "model": "gpt-5.6-sol",
+          "sample": 3,
+          "turnId": "d6725e48-36c3-4501-95f6-5209229ac634",
+          "queuedMs": 34,
+          "startedMs": 849,
+          "firstAnswerMs": 6355,
+          "totalMs": 6606,
+          "inputTokens": 5561,
+          "outputTokens": 88,
+          "answerChars": 344,
+          "serverLatency": null
+        }
+      ],
+      "summary": {
+        "firstAnswerMs": {
+          "samples": 3,
+          "median": 6103,
+          "p95": 6355
+        },
+        "totalMs": {
+          "samples": 3,
+          "median": 6353,
+          "p95": 6606
+        },
+        "inputTokens": {
+          "samples": 3,
+          "median": 5408,
+          "p95": 5561
+        },
+        "outputTokens": {
+          "samples": 3,
+          "median": 93,
+          "p95": 96
+        }
+      }
+    }
+  ]
+}

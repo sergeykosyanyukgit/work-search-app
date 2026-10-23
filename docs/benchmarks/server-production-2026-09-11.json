@@ -1,0 +1,236 @@
+{
+  "measuredAt": "2026-09-11T19:54:47.389Z",
+  "source": "public-websocket-synthetic",
+  "results": [
+    {
+      "variant": "baseline",
+      "model": "gpt-5.6-sol",
+      "samples": [
+        {
+          "variant": "baseline",
+          "model": "gpt-5.6-sol",
+          "sample": 1,
+          "turnId": "f1c668b8-6cdd-419d-846b-d252e0c63469",
+          "queuedMs": 40,
+          "startedMs": 683,
+          "firstAnswerMs": 6029,
+          "totalMs": 6298,
+          "inputTokens": 10637,
+          "outputTokens": 114,
+          "answerChars": 431,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:54:12.535Z",
+            "dispatchedAt": "2026-09-11T19:54:12.584Z",
+            "workerAcceptedAt": "2026-09-11T19:54:12.589Z",
+            "modelStartedAt": "2026-09-11T19:54:13.370Z",
+            "firstAnswerAt": "2026-09-11T19:54:18.537Z",
+            "completedAt": "2026-09-11T19:54:18.807Z",
+            "queueMs": 49,
+            "dispatchMs": 5,
+            "runtimeStartupMs": 781,
+            "modelToFirstAnswerMs": 5167,
+            "timeToFirstAnswerMs": 6002,
+            "generationMs": 270,
+            "totalMs": 6272
+          }
+        },
+        {
+          "variant": "baseline",
+          "model": "gpt-5.6-sol",
+          "sample": 2,
+          "turnId": "faedfcaf-88df-4f80-a13e-590e88e5553e",
+          "queuedMs": 31,
+          "startedMs": 527,
+          "firstAnswerMs": 8101,
+          "totalMs": 8340,
+          "inputTokens": 10803,
+          "outputTokens": 116,
+          "answerChars": 432,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:54:19.486Z",
+            "dispatchedAt": "2026-09-11T19:54:19.524Z",
+            "workerAcceptedAt": "2026-09-11T19:54:19.528Z",
+            "modelStartedAt": "2026-09-11T19:54:20.218Z",
+            "firstAnswerAt": "2026-09-11T19:54:27.562Z",
+            "completedAt": "2026-09-11T19:54:27.803Z",
+            "queueMs": 38,
+            "dispatchMs": 4,
+            "runtimeStartupMs": 690,
+            "modelToFirstAnswerMs": 7344,
+            "timeToFirstAnswerMs": 8076,
+            "generationMs": 241,
+            "totalMs": 8317
+          }
+        },
+        {
+          "variant": "baseline",
+          "model": "gpt-5.6-sol",
+          "sample": 3,
+          "turnId": "cccbde4b-fc55-4f71-b640-eecb60e31a30",
+          "queuedMs": 27,
+          "startedMs": 585,
+          "firstAnswerMs": 4688,
+          "totalMs": 4906,
+          "inputTokens": 11567,
+          "outputTokens": 90,
+          "answerChars": 355,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:54:28.476Z",
+            "dispatchedAt": "2026-09-11T19:54:28.510Z",
+            "workerAcceptedAt": "2026-09-11T19:54:28.514Z",
+            "modelStartedAt": "2026-09-11T19:54:29.077Z",
+            "firstAnswerAt": "2026-09-11T19:54:33.146Z",
+            "completedAt": "2026-09-11T19:54:33.365Z",
+            "queueMs": 34,
+            "dispatchMs": 4,
+            "runtimeStartupMs": 563,
+            "modelToFirstAnswerMs": 4069,
+            "timeToFirstAnswerMs": 4670,
+            "generationMs": 219,
+            "totalMs": 4889
+          }
+        }
+      ],
+      "summary": {
+        "firstAnswerMs": {
+          "samples": 3,
+          "median": 6029,
+          "p95": 7893.799999999999
+        },
+        "totalMs": {
+          "samples": 3,
+          "median": 6298,
+          "p95": 8135.799999999999
+        },
+        "inputTokens": {
+          "samples": 3,
+          "median": 10803,
+          "p95": 11490.6
+        },
+        "outputTokens": {
+          "samples": 3,
+          "median": 114,
+          "p95": 115.8
+        }
+      }
+    },
+    {
+      "variant": "profile-v2",
+      "model": "gpt-5.6-sol",
+      "samples": [
+        {
+          "variant": "profile-v2",
+          "model": "gpt-5.6-sol",
+          "sample": 1,
+          "turnId": "c5e02661-6e2d-4ecf-9bcb-cf7a9b8b6cfc",
+          "queuedMs": 30,
+          "startedMs": 237,
+          "firstAnswerMs": 3299,
+          "totalMs": 4298,
+          "inputTokens": 7222,
+          "outputTokens": 53,
+          "answerChars": 204,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:54:34.979Z",
+            "dispatchedAt": "2026-09-11T19:54:35.060Z",
+            "workerAcceptedAt": "2026-09-11T19:54:35.064Z",
+            "modelStartedAt": "2026-09-11T19:54:35.196Z",
+            "firstAnswerAt": "2026-09-11T19:54:38.257Z",
+            "completedAt": "2026-09-11T19:54:39.256Z",
+            "queueMs": 81,
+            "dispatchMs": 4,
+            "runtimeStartupMs": 132,
+            "modelToFirstAnswerMs": 3061,
+            "timeToFirstAnswerMs": 3278,
+            "generationMs": 999,
+            "totalMs": 4277
+          }
+        },
+        {
+          "variant": "profile-v2",
+          "model": "gpt-5.6-sol",
+          "sample": 2,
+          "turnId": "52c09432-5083-4b82-b54c-6e35e5d6425d",
+          "queuedMs": 25,
+          "startedMs": 73,
+          "firstAnswerMs": 1728,
+          "totalMs": 2841,
+          "inputTokens": 7511,
+          "outputTokens": 51,
+          "answerChars": 198,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:54:39.932Z",
+            "dispatchedAt": "2026-09-11T19:54:39.966Z",
+            "workerAcceptedAt": "2026-09-11T19:54:39.970Z",
+            "modelStartedAt": "2026-09-11T19:54:39.987Z",
+            "firstAnswerAt": "2026-09-11T19:54:41.643Z",
+            "completedAt": "2026-09-11T19:54:42.757Z",
+            "queueMs": 34,
+            "dispatchMs": 4,
+            "runtimeStartupMs": 17,
+            "modelToFirstAnswerMs": 1656,
+            "timeToFirstAnswerMs": 1711,
+            "generationMs": 1114,
+            "totalMs": 2825
+          }
+        },
+        {
+          "variant": "profile-v2",
+          "model": "gpt-5.6-sol",
+          "sample": 3,
+          "turnId": "c8d821e0-a552-4042-bdc3-9945b0830c23",
+          "queuedMs": 23,
+          "startedMs": 67,
+          "firstAnswerMs": 2178,
+          "totalMs": 3287,
+          "inputTokens": 7590,
+          "outputTokens": 59,
+          "answerChars": 226,
+          "serverLatency": {
+            "version": 1,
+            "queuedAt": "2026-09-11T19:54:43.431Z",
+            "dispatchedAt": "2026-09-11T19:54:43.468Z",
+            "workerAcceptedAt": "2026-09-11T19:54:43.471Z",
+            "modelStartedAt": "2026-09-11T19:54:43.483Z",
+            "firstAnswerAt": "2026-09-11T19:54:45.594Z",
+            "completedAt": "2026-09-11T19:54:46.703Z",
+            "queueMs": 37,
+            "dispatchMs": 3,
+            "runtimeStartupMs": 12,
+            "modelToFirstAnswerMs": 2111,
+            "timeToFirstAnswerMs": 2163,
+            "generationMs": 1109,
+            "totalMs": 3272
+          }
+        }
+      ],
+      "summary": {
+        "firstAnswerMs": {
+          "samples": 3,
+          "median": 2178,
+          "p95": 3186.8999999999996
+        },
+        "totalMs": {
+          "samples": 3,
+          "median": 3287,
+          "p95": 4196.9
+        },
+        "inputTokens": {
+          "samples": 3,
+          "median": 7511,
+          "p95": 7582.1
+        },
+        "outputTokens": {
+          "samples": 3,
+          "median": 53,
+          "p95": 58.4
+        }
+      }
+    }
+  ]
+}

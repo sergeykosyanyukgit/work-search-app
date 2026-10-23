@@ -1,0 +1,1 @@
+Explain the difference between a process and a thread. When should asynchronous code be used?

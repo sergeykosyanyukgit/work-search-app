@@ -1,0 +1,31 @@
+appId: ru.worksearch.assistant
+productName: Work Search
+directories:
+  output: release
+files:
+  - out/**/*
+  - package.json
+  - LICENSE
+  - THIRD_PARTY_NOTICES.md
+beforePack: scripts/check-release-resources.mjs
+asar: true
+asarUnpack:
+  - '**/*.node'
+extraResources:
+  - from: .cache/release-notices
+    to: notices
+  - from: resources/whisper
+    to: whisper
+  - from: resources/vcredist
+    to: vcredist
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: Work-Search-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false
+  include: scripts/installer.nsh
+npmRebuild: true

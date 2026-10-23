@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "profile": "interview-assistant@2",
+  "turns": 3,
+  "cancellation": {
+    "firstTextMs": 3287,
+    "settledMs": 48
+  },
+  "replacementsById": true,
+  "reconnect": {
+    "succeeded": true,
+    "automaticResends": 0,
+    "afterSequence": 60
+  },
+  "afterCancel": {
+    "inputTokens": 7546,
+    "outputTokens": 220,
+    "firstAnswerMs": 26395,
+    "totalMs": 28392,
+    "serverLatency": {
+      "version": 1,
+      "queuedAt": "2026-09-11T20:00:35.536Z",
+      "dispatchedAt": "2026-09-11T20:00:35.575Z",
+      "workerAcceptedAt": "2026-09-11T20:00:35.578Z",
+      "modelStartedAt": "2026-09-11T20:00:35.588Z",
+      "firstAnswerAt": "2026-09-11T20:01:01.931Z",
+      "completedAt": "2026-09-11T20:01:03.928Z",
+      "queueMs": 39,
+      "dispatchMs": 3,
+      "runtimeStartupMs": 10,
+      "modelToFirstAnswerMs": 26343,
+      "timeToFirstAnswerMs": 26395,
+      "generationMs": 1997,
+      "totalMs": 28392
+    }
+  },
+  "afterReconnect": {
+    "inputTokens": 7789,
+    "outputTokens": 147,
+    "firstAnswerMs": 3870,
+    "totalMs": 4751,
+    "serverLatency": {
+      "version": 1,
+      "queuedAt": "2026-09-11T20:01:04.031Z",
+      "dispatchedAt": "2026-09-11T20:01:04.079Z",
+      "workerAcceptedAt": "2026-09-11T20:01:04.083Z",
+      "modelStartedAt": "2026-09-11T20:01:04.094Z",
+      "firstAnswerAt": "2026-09-11T20:01:07.901Z",
+      "completedAt": "2026-09-11T20:01:08.782Z",
+      "queueMs": 48,
+      "dispatchMs": 4,
+      "runtimeStartupMs": 11,
+      "modelToFirstAnswerMs": 3807,
+      "timeToFirstAnswerMs": 3870,
+      "generationMs": 881,
+      "totalMs": 4751
+    }
+  },
+  "persisted": true,
+  "cleanup": true
+}

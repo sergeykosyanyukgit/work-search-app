@@ -1,0 +1,3 @@
+interface:
+  display_name: "Work Search: проверки"
+  short_description: "Vitest, Playwright, native ABI и тестовая среда"

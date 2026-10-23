@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "measuredAt": "2026-09-11",
+  "model": "whisper.cpp v1.9.2 / ggml-small.bin",
+  "source": "Local repository fixtures, no interview data",
+  "notes": [
+    "New whisper-server process per configuration, prepared before inference",
+    "No model, decoding or language changes except explicit final-language comparison",
+    "Times are observations from a small fixture sample, not a latency SLA"
+  ],
+  "reports": [
+    {
+      "file": "report-4-threads.json",
+      "at": "2026-09-11T19:35:22.420Z",
+      "cpu": "AMD Ryzen 5 8600G w/ Radeon 760M Graphics",
+      "logicalCpus": 12,
+      "threads": 4,
+      "language": "auto",
+      "prepareMs": 1066,
+      "samples": [
+        {
+          "fixture": "ru-question",
+          "round": 1,
+          "audioMs": 8705,
+          "inferenceMs": 5602,
+          "segments": 2,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "jfk",
+          "round": 1,
+          "audioMs": 11000,
+          "inferenceMs": 5358,
+          "segments": 1,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "ru-question",
+          "round": 2,
+          "audioMs": 8705,
+          "inferenceMs": 5286,
+          "segments": 2,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "jfk",
+          "round": 2,
+          "audioMs": 11000,
+          "inferenceMs": 5189,
+          "segments": 1,
+          "recognitionMatched": true
+        }
+      ]
+    },
+    {
+      "file": "report-6-threads.json",
+      "at": "2026-09-11T19:36:11.033Z",
+      "cpu": "AMD Ryzen 5 8600G w/ Radeon 760M Graphics",
+      "logicalCpus": 12,
+      "threads": 6,
+      "language": "auto",
+      "prepareMs": 876,
+      "samples": [
+        {
+          "fixture": "ru-question",
+          "round": 1,
+          "audioMs": 8705,
+          "inferenceMs": 4317,
+          "segments": 2,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "jfk",
+          "round": 1,
+          "audioMs": 11000,
+          "inferenceMs": 4275,
+          "segments": 1,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "ru-question",
+          "round": 2,
+          "audioMs": 8705,
+          "inferenceMs": 4406,
+          "segments": 2,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "jfk",
+          "round": 2,
+          "audioMs": 11000,
+          "inferenceMs": 4335,
+          "segments": 1,
+          "recognitionMatched": true
+        }
+      ]
+    },
+    {
+      "file": "report-8-threads.json",
+      "at": "2026-09-11T19:37:01.875Z",
+      "cpu": "AMD Ryzen 5 8600G w/ Radeon 760M Graphics",
+      "logicalCpus": 12,
+      "threads": 8,
+      "language": "auto",
+      "prepareMs": 863,
+      "samples": [
+        {
+          "fixture": "ru-question",
+          "round": 1,
+          "audioMs": 8705,
+          "inferenceMs": 3848,
+          "segments": 2,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "jfk",
+          "round": 1,
+          "audioMs": 11000,
+          "inferenceMs": 3986,
+          "segments": 1,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "ru-question",
+          "round": 2,
+          "audioMs": 8705,
+          "inferenceMs": 4054,
+          "segments": 2,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "jfk",
+          "round": 2,
+          "audioMs": 11000,
+          "inferenceMs": 3841,
+          "segments": 1,
+          "recognitionMatched": true
+        }
+      ]
+    },
+    {
+      "file": "report-12-threads.json",
+      "at": "2026-09-11T19:37:40.534Z",
+      "cpu": "AMD Ryzen 5 8600G w/ Radeon 760M Graphics",
+      "logicalCpus": 12,
+      "threads": 12,
+      "language": "auto",
+      "prepareMs": 863,
+      "samples": [
+        {
+          "fixture": "ru-question",
+          "round": 1,
+          "audioMs": 8705,
+          "inferenceMs": 3783,
+          "segments": 2,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "jfk",
+          "round": 1,
+          "audioMs": 11000,
+          "inferenceMs": 3525,
+          "segments": 1,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "ru-question",
+          "round": 2,
+          "audioMs": 8705,
+          "inferenceMs": 3616,
+          "segments": 2,
+          "recognitionMatched": true
+        },
+        {
+          "fixture": "jfk",
+          "round": 2,
+          "audioMs": 11000,
+          "inferenceMs": 3526,
+          "segments": 1,
+          "recognitionMatched": true
+        }
+      ]
+    },
+    {
+      "file": "report-repeat-4.json",
+      "at": "2026-09-11T19:39:20.454Z",
+      "cpu": "AMD Ryzen 5 8600G w/ Radeon 760M Graphics",
+      "logicalCpus": 12,
+      "threads": 4,
+      "language": "auto",
+      "prepareMs": 882,
+      "samples": [
+        {
+          "fixture": "ru-question",
+          "round": 1,
+          "audioMs": 8705,
+          "inferenceMs": 5711,
+          "segments": 2,
+          "recognitionMatched": true,
+          "transcriptHash": "5b299281a9710909f23e82e64c2ea92b4b0bf40ae0faeef6916c6ea60532d3b3"
+        },
+        {
+          "fixture": "jfk",
+          "round": 1,
+          "audioMs": 11000,
+          "inferenceMs": 5434,
+          "segments": 1,
+          "recognitionMatched": true,
+          "transcriptHash": "4dd743f8668427f2825c4492d6f017b2bb8d142ffeb63f5e52f343f02c741d80"
+        }
+      ]
+    },
+    {
+      "file": "report-final-8.json",
+      "at": "2026-09-11T19:39:32.575Z",
+      "cpu": "AMD Ryzen 5 8600G w/ Radeon 760M Graphics",
+      "logicalCpus": 12,
+      "threads": 8,
+      "language": "auto",
+      "prepareMs": 874,
+      "samples": [
+        {
+          "fixture": "ru-question",
+          "round": 1,
+          "audioMs": 8705,
+          "inferenceMs": 3915,
+          "segments": 2,
+          "recognitionMatched": true,
+          "transcriptHash": "5b299281a9710909f23e82e64c2ea92b4b0bf40ae0faeef6916c6ea60532d3b3"
+        },
+        {
+          "fixture": "jfk",
+          "round": 1,
+          "audioMs": 11000,
+          "inferenceMs": 3860,
+          "segments": 1,
+          "recognitionMatched": true,
+          "transcriptHash": "4dd743f8668427f2825c4492d6f017b2bb8d142ffeb63f5e52f343f02c741d80"
+        }
+      ]
+    },
+    {
+      "file": "report-explicit-8.json",
+      "at": "2026-09-11T19:41:08.426Z",
+      "cpu": "AMD Ryzen 5 8600G w/ Radeon 760M Graphics",
+      "logicalCpus": 12,
+      "threads": 8,
+      "language": "ru for ru-question; en for jfk",
+      "prepareMs": 871,
+      "samples": [
+        {
+          "fixture": "ru-question",
+          "round": 1,
+          "audioMs": 8705,
+          "inferenceMs": 2179,
+          "segments": 2,
+          "recognitionMatched": true,
+          "transcriptHash": "5b299281a9710909f23e82e64c2ea92b4b0bf40ae0faeef6916c6ea60532d3b3"
+        },
+        {
+          "fixture": "jfk",
+          "round": 1,
+          "audioMs": 11000,
+          "inferenceMs": 2129,
+          "segments": 1,
+          "recognitionMatched": true,
+          "transcriptHash": "4dd743f8668427f2825c4492d6f017b2bb8d142ffeb63f5e52f343f02c741d80"
+        }
+      ]
+    }
+  ]
+}
