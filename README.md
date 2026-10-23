@@ -36,11 +36,14 @@
 
 ```powershell
 pnpm install --frozen-lockfile
+pnpm setup:electron
 pnpm setup:whisper
 pnpm setup:runtime
 pnpm run rebuild
 pnpm dev
 ```
+
+`setup:electron` скачивает runtime установленной по lockfile версии Electron через официальный `install-electron`. Генерация лицензий также вызывает эту команду, поэтому `pack` и `dist` работают после чистой установки зависимостей: файлы лицензий Electron и Chromium уже доступны до упаковки.
 
 `setup:whisper` загружает закрепленный официальный whisper.cpp v1.9.2 и проверяет SHA256. `setup:runtime` сохраняет официальный Microsoft VC++ Runtime с проверкой подписи для включения в установщик; он не устанавливает его на компьютер разработчика. Если Whisper сообщает об отсутствующих DLL, установите этот runtime.
 

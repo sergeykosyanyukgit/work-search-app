@@ -22,9 +22,10 @@
     "check:publication": "node scripts/check-publication.mjs",
     "build": "pnpm typecheck && electron-vite build",
     "rebuild": "electron-builder install-app-deps",
+    "setup:electron": "install-electron",
     "setup:whisper": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-whisper.ps1",
     "setup:runtime": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-runtime.ps1",
-    "licenses:generate": "node scripts/generate-third-party-notices.mjs",
+    "licenses:generate": "pnpm setup:electron && node scripts/generate-third-party-notices.mjs",
     "release:preflight": "node scripts/check-release-resources.mjs",
     "dist": "pnpm licenses:generate && pnpm release:preflight && pnpm build && electron-builder --win nsis --x64",
     "pack": "pnpm licenses:generate && pnpm release:preflight && pnpm build && electron-builder --dir --win --x64"
